@@ -2,61 +2,29 @@ const express = require('express');
 const router = express.Router();
 const verify = require('./verifyToken');
 
-// Opens "models/post.js"
-const postModel = require('../models/post');
+// Imported schedule model
+const scheduleModel = require('../models/schedule');
 
-router.get('/', verify, async (req, res) => {
+/*
+    Adds schedules to the collection "weekly_schedules" database.
+    If the day_id exist within the database then the item linked to that id will be update else
+    the data will be added as a new item to the database.
+    
+    Days can only range from 0-4 this being Monday-Friday. 
+*/
+router.put('/update-schedule', verify, async (req, res) => {
     try {
-        const posts = await postModel.find();
-        res.json(posts);
+        if (req.body.day_id >= 0 && req.body.day_id <= 4) {
+            await scheduleModel.findOneAndUpdate({ day_id: req.body.day_id }, req.body, { upsert: true });
+            res.status(200).send("Data successfully updated.");    
+        }
+        else {
+            res.status(400).send("An error occured, invalid day entered.")
+        }
     }
     catch(err) {
-        res.json({message:err});
+        res.status(200).send("An error occured, please try again later.");
     };
-});
-
-// Submits a post
-router.post('/', verify, async (req, res) => {
-    const post_contain = new postModel({
-        title: req.body.title,
-        description: req.body.description,
-        image: req.body.image,
-        hosted: req.body.hosted
-    });
-
-    // Returns a promise
-    try{
-        const savePost = await post_contain.save();
-        res.json(savePost);
-    }
-    catch(err) {
-        res.json({message: err});
-    };
-});
-
-// Delete Post
-router.delete('/:postId', async (req, res) => {
-    try {
-        const removePost = await postModel.remove({_id:req.params.postId});
-        res.json(removePost);
-    }
-    catch(err) {
-        res.json({message:err});
-    }
-});
-
-// Update Post
-router.patch('/:postId', async (req, res) => {
-    try {
-        const updatePost = await postModel.updateOne(
-            {_id: req.params.postId}, 
-            {$set: {title: req.body.title}}
-        );
-        res.json(updatePost);
-    }
-    catch(err) {
-        res.json({message:err});
-    }
 });
 
 // Exports the routes as a package.

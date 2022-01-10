@@ -14,7 +14,6 @@ require('dotenv/config');
 
 // Import Routes
 const adminRoute = require('./routes/admin');
-const sendRoute = require('./routes/send');
 const authRoute = require('./routes/auth');
 
 // Middleware (Uses the imported route from "routes" directory)
@@ -24,10 +23,9 @@ app.use(cors());
 // Imported Routes
 app.use('/admin', adminRoute);
 app.use('/auth', authRoute);
-app.use('/api/send', sendRoute);
 
 // Connect to DB
-mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, () => {
     console.log("Connected")
 })
 
