@@ -7,14 +7,10 @@ const app = express();
 
 require('dotenv/config');
 
-// Middlewares
-// app.use('/post', () => {
-//     console.log("Are you a detective?");
-// })
-
 // Import Routes
 const adminRoute = require('./routes/admin');
 const authRoute = require('./routes/auth');
+const resetPasswordRoute = require('./routes/passwordReset');
 
 // Middleware (Uses the imported route from "routes" directory)
 app.use(bodyParser.json({extended: true}));
@@ -23,9 +19,10 @@ app.use(cors());
 // Imported Routes
 app.use('/admin', adminRoute);
 app.use('/auth', authRoute);
+app.use('/reset-password', resetPasswordRoute);
 
 // Connect to DB
-mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, () => {
+mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, 'useCreateIndex': true }, () => {
     console.log("Connected")
 })
 
