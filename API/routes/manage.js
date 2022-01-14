@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     request({url, json:true}, (error, data) => {
         // console.log(data.body)
         res.send({
-            temperature: data.body.main.temp - 273.15,
+            temperature: Math.round(data.body.main.temp - 273.15),
             description: data.body.weather[0].description,
             city: data.body.name
 
