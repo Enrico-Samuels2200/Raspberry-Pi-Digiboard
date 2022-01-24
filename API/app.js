@@ -11,6 +11,8 @@ require('dotenv/config');
 const adminRoute = require('./routes/admin');
 const authRoute = require('./routes/auth');
 const resetPasswordRoute = require('./routes/passwordReset');
+const socialRoute = require('./routes/socialMedia');
+const weatherRoute = require('./routes/weather');
 
 // Middleware (Uses the imported route from "routes" directory)
 app.use(bodyParser.json({extended: true}));
@@ -20,6 +22,8 @@ app.use(cors());
 app.use('/admin', adminRoute);
 app.use('/auth', authRoute);
 app.use('/reset-password', resetPasswordRoute);
+app.use('/social', socialRoute);
+app.use('/weather', weatherRoute);
 
 // Connect to DB
 mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, 'useCreateIndex': true }, () => {
