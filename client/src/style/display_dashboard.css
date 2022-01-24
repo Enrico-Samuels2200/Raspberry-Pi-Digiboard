@@ -1,0 +1,93 @@
+.display {
+    display: flex;
+    flex-direction: row;
+}
+
+.dysweather {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 15px;
+    background-color: rgb(165, 165, 165);
+    border: 3px black solid ;
+    border-radius: 5px;
+    padding: 5px 5px;
+
+}
+.dschedule {
+    width: auto;
+}
+
+.wholeday {
+    border: 3px black solid;
+    background-color: lightblue;
+    padding-left: 7px 7px;
+}
+.dsocialjob {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    background-color: rgb(165, 165, 165);
+    border: 3px black solid ;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 5px;
+    width: 75%;
+}
+.body {
+    background: rgba(214, 219, 214, 0.959);
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.youtb {
+    width: 100%;
+    height: 360px;
+}
+
+.wholeday {
+    display: flex;
+    flex-direction: column;
+}
+
+.dtitleday {
+    display: flex;
+    justify-content: center;
+}
+
+.bottomwholeday {
+    display: flex;
+    flex-direction: row;
+}
+
+.ddaydescription {
+    width: 70%;
+}
+.dlistschedule {
+    padding-left: 20px;
+}
+
+.dsocial {
+    background-color: white;
+    border: 3px black solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 140px;
+}
+
+.djoblist {
+    background-color: white;
+    border: 3px black solid;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.socialHeading {
+    display: inline;
+    }
+
+.jobHeading {
+    display: inline;
+    
+}
