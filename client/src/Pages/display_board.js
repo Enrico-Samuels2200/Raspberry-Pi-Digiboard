@@ -1,5 +1,6 @@
 import React from 'react';
 import './style/display_dashboard.css';
+import Slideshow from './jobslideshow';
 
 export default function Display() {
     return (
@@ -46,7 +47,8 @@ export default function Display() {
                     <div className='djoblist'>
                     {/* joblistings div code */}
                         <h1>Job Listings</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id maximus sapien. Vivamus finibus eget dui sit amet ultrices. Ut metus purus, finibus tristique sem id, consequat convallis odio. Duis eget lectus ac justo consequat ultricies. Maecenas convallis mi ultrices lectus vulputate, sit amet egestas neque porta. Pellentesque finibus venenatis elit, ut pulvinar urna vestibulum viverra. Pellentesque finibus eros id egestas porta. Donec nibh odio, aliquet ut interdum eu, facilisis non risus. In egestas sagittis justo, non euismod urna interdum sed. Proin et urna sed turpis lobortis suscipit.</p>
+                        {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id maximus sapien. Vivamus finibus eget dui sit amet ultrices. Ut metus purus, finibus tristique sem id, consequat convallis odio. Duis eget lectus ac justo consequat ultricies. Maecenas convallis mi ultrices lectus vulputate, sit amet egestas neque porta. Pellentesque finibus venenatis elit, ut pulvinar urna vestibulum viverra. Pellentesque finibus eros id egestas porta. Donec nibh odio, aliquet ut interdum eu, facilisis non risus. In egestas sagittis justo, non euismod urna interdum sed. Proin et urna sed turpis lobortis suscipit.</p> */}
+                        <Slideshow/>
                     </div>
                 </div>
             </div>            

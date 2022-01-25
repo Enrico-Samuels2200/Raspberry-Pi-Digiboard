@@ -14,15 +14,25 @@
     padding: 5px 5px;
 
 }
+.dschedule {
+    width: auto;
+}
 
+.wholeday {
+    border: 3px black solid;
+    background-color: lightblue;
+    padding-left: 7px 7px;
+}
 .dsocialjob {
     display: flex;
     flex-direction: column;
     margin-right: 50px;
     background-color: rgb(165, 165, 165);
     border: 3px black solid ;
-    padding: 7px 7px;
+    padding-left: 7px;
+    padding-right: 7px;
     border-radius: 5px;
+    width: 75%;
 }
 .body {
     background: rgba(214, 219, 214, 0.959);
@@ -41,14 +51,92 @@
     flex-direction: column;
 }
 
+.dtitleday {
+    display: flex;
+    justify-content: center;
+}
+
 .bottomwholeday {
     display: flex;
     flex-direction: row;
 }
 
 .ddaydescription {
-    width: 50%;
+    width: 70%;
 }
 .dlistschedule {
     padding-left: 20px;
 }
+
+.dsocial {
+    background-color: white;
+    border: 3px black solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 140px;
+}
+
+.djoblist {
+    background-color: white;
+    border: 3px black solid;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.socialHeading {
+    display: inline;
+    }
+
+.jobHeading {
+    display: inline;
+    
+}
+
+
+/* -------------------------SlideSHow--------------------------- */
+
+
+
+/* Slideshow */
+
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 500px;
+  }
+  
+  .slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+  }
+  
+  .slide {
+    display: inline-block;
+  
+    height: 400px;
+    width: 100%;
+    border-radius: 40px;
+  }
+  
+  /* Buttons */
+  
+  .slideshowDots {
+    text-align: center;
+  }
+  
+  .slideshowDot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  
+    cursor: pointer;
+    margin: 15px 7px 0px;
+  
+    background-color: #c4c4c4;
+  }
+  
+  .slideshowDot.active {
+    background-color: #6a0dad;
+  }
+  
