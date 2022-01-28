@@ -1,7 +1,16 @@
 import React from 'react';
 
+// function SlidesData(){
+//     const animals = ["dog", "beaver", "cat"];
+//     console.log("Its done");
 
+//     document.getElementsByClassName('slides').value = animals[1];
+//     console.log(document.getElementsByClassName('slides').value);
+
+     
+// } 
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
+const words = ["Hey", "I am", "root"];
 const delay = 2500;
 
 function Slideshow() {
@@ -20,6 +29,7 @@ function Slideshow() {
       () =>
         setIndex((prevIndex) =>
           prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+          
         ),
       delay
     );
@@ -36,19 +46,15 @@ function Slideshow() {
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
         {colors.map((backgroundColor, index) => (
-          <div
-            className="slide"
-            key={index}
-            style={{ backgroundColor }}
-          ></div>
+          <div className="slide" key={index} style={{ backgroundColor }}>
+            <h1>{words[index]}</h1>
+          </div>
         ))}
       </div>
 
       <div className="slideshowDots">
         {colors.map((_, idx) => (
-          <div
-            key={idx}
-            className={`slideshowDot${index === idx ? " active" : ""}`}
+          <div key={idx} className={`slideshowDot${index === idx ? " active" : ""}`}
             onClick={() => {
               setIndex(idx);
             }}
@@ -58,7 +64,6 @@ function Slideshow() {
     </div>
   );
 }
-
 // ReactDOM.render(<Slideshow />, document.getElementById("App"));
 
 export default Slideshow;

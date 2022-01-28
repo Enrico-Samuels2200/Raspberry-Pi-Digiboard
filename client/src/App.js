@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/admin' element={<Admin />} />
-        <Route path='/' exact element={<Display />} />
+        <Route path='/display' exact element={<Display />} />
       </Routes>
     </BrowserRouter>
   );
