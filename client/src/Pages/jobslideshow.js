@@ -41,24 +41,17 @@ function Slideshow() {
 
   return (
     <div className="slideshow">
-      <div
-        className="slideshowSlider"
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-      >
+      <div className="slideshowSlider" style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
         {colors.map((backgroundColor, index) => (
           <div className="slide" key={index} style={{ backgroundColor }}>
-            <h1>{words[index]}</h1>
+            <div className='info-section'>
+              <h4>Junior frontend developer</h4>
+              <p id='description'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id maximus sapien. Vivamus finibus eget dui sit amet ultrices. Ut metus purus, finibus tristique sem id, consequat convallis odio. Duis eget lectus ac justo consequat ultricies.
+              </p>
+              <p id='platform'>LinkedIn</p>
+            </div>
           </div>
-        ))}
-      </div>
-
-      <div className="slideshowDots">
-        {colors.map((_, idx) => (
-          <div key={idx} className={`slideshowDot${index === idx ? " active" : ""}`}
-            onClick={() => {
-              setIndex(idx);
-            }}
-          ></div>
         ))}
       </div>
     </div>
