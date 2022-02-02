@@ -1,0 +1,297 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    background: rgba(0, 0, 0, 0.959);
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-container, .right-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.left-container {
+    margin: 0 6% 0 0;
+}
+
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    margin: 1% 0 0 5%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(165, 165, 165);
+    border: 3px black solid;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+.media-outlet {
+    height: 160%;
+    width: 100%;
+    margin: 0;
+    background: black;
+}
+
+.media-outlet iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.schedule-section {
+    width: auto;
+    height: 50%;
+}
+
+.bottom-panel {
+    background-color: rgb(7, 35, 44);
+    height: 100%;
+    padding: 10px;
+}
+
+.data-display {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 0;
+}
+
+.bottom-panel .data-display {
+    display: flex;
+    flex-direction: row;
+}
+
+.day-description {
+    width: 56%;
+    overflow: hidden;
+}
+
+.day-description p {
+    height: 100px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.day-schedule h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+.day-description p,
+.day-schedule li {
+    font-size: 0.8em;
+}
+
+.forecast-display {
+    display: flex;
+    flex-direction: row;
+    background-color: orangered;
+    height: 30%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.weather-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.weather-item h4,
+.weather-item p {
+    margin: 3% 0 0 0;
+    padding: 0;
+}
+
+.weather-item img {
+    width: 25%;
+    height: 100%;
+    margin: 0 0 2% 0;
+}
+
+.weather-item h4 {
+    font-size: 0.8em;
+}
+
+.weather-item p {
+    font-size: 0.7em;
+}
+
+/* -------------------------------- Right Container -------------------------------- */
+.right-container {
+    width: 20%;
+    margin: 0 2.8% 0 0;
+}
+
+.social-display {
+    display: flex;
+    flex-direction: column;
+    background: rgb(24, 24, 24);
+    border: 3px black solid;
+    padding: 25px 20px;
+    height: 40%;
+    overflow-y: scroll;
+    color: white;
+}
+
+.social-display::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+.social-display::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.social-display::-webkit-scrollbar-thumb {
+  background: rgb(10, 116, 134);
+  outline: 1px solid rgb(12, 154, 179);
+}
+
+.social-display h2 {
+    top: 0;
+    position: sticky;
+    margin: 0 0 15% 0;
+    background: rgb(24, 24, 24);
+    font-size: 1.1em;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: row;
+    margin: 5% 0;
+}
+
+.social-item .icon {
+    height: 60px;
+    margin: 0 5% 0 0;
+}
+
+.social-item .icon img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(12, 154, 179);
+    border-radius: 50%;
+}
+
+.social-item .data {
+    height: auto;
+    margin: 4% 0 0 0;
+}
+
+.social-item .data h4 {
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+
+.social-item .data p {
+    font-size: 0.7em;
+    margin: 10% 0 0 0;
+}
+
+/* Old code */
+.dsocialjob {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    background-color: rgb(165, 165, 165);
+    border: 3px black solid ;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 5px;
+    width: 75%;
+}
+
+/* .youtb {
+    width: 100%;
+    height: 360px;
+} */
+
+.wholeday {
+    display: flex;
+    flex-direction: column;
+}
+
+.ddaydescription {
+    width: 70%;
+}
+.dlistschedule {
+    padding-left: 20px;
+}
+
+.dsocial {
+    background-color: white;
+    border: 3px black solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 140px;
+}
+
+.socialHeading {
+    display: inline;
+    }
+
+.jobHeading {
+    display: inline;
+    
+}
+
+
+/* -------------------------SlideSHow--------------------------- */
+
+.job-section {
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden ; */
+    background-color: white;
+    border: 3px black solid;
+    padding: 0 5px;
+    height: 50%;
+}
+
+.slideshow {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 75%;
+    height: 100%;
+}
+  
+.slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+    height: 100%;
+    width: 100%;
+}
+  
+.slide {
+    display: inline-block;
+    margin: 16% 0 0 0;
+    height: 80%;
+    width: 100%;
+}
+
+.slide .info-section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+.slide .info-section p {
+    font-size: 0.9em;
+    background: red;
+    word-break: break-all;
+}
