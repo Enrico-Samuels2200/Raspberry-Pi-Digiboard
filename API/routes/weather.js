@@ -17,6 +17,17 @@ let days = {
     6: 'Saturday'
 };
 
+let icons = {
+    'clear sky': 'https://raw.githubusercontent.com/sandbox2200/General-Icons/main/weather_icons/clear.png',
+    'overcast clouds': 'https://raw.githubusercontent.com/sandbox2200/General-Icons/main/weather_icons/cloudy.png',
+    'broken clouds': 'https://raw.githubusercontent.com/sandbox2200/General-Icons/main/weather_icons/partly-cloudy.png',
+    'few clouds': 'https://raw.githubusercontent.com/sandbox2200/General-Icons/main/weather_icons/partly-cloudy.png',
+    'scattered clouds': 'https://raw.githubusercontent.com/sandbox2200/General-Icons/main/weather_icons/partly-cloudy.png',
+    'thunderstorm': 'https://raw.githubusercontent.com/sandbox2200/General-Icons/main/weather_icons/lightning.png',
+    'rain': 'https://raw.githubusercontent.com/sandbox2200/General-Icons/main/weather_icons/rainy.png',
+    'mist': 'https://raw.githubusercontent.com/sandbox2200/General-Icons/main/weather_icons/fog.png',
+}
+
 // Self explanatory, it returns the date in the format yyyy-mm-dd
 get_date = () => {
     let day = String(date.getDate()).padStart(2, '0');
@@ -32,7 +43,8 @@ get_forcast = (item) => {
     forcast_item = {
         temperature: Math.round(item.main.temp - 273.15),
         weather_type: item.weather[0].description,
-        day: days[day_number]
+        day: days[day_number],
+        icon: icons[item.weather[0].description]
     };
 
     weekly_forecast.push(forcast_item);
