@@ -1,9 +1,27 @@
 import React from 'react';
 
-export default function Admin() {
-    return (
-        <div>
-            <p>I am admin</p>
-        </div>
-    );
-};
+class Login extends React.Component{
+
+    state={
+        email:'',
+        pwd:''
+    }
+
+    handleChange = (e) => {
+        const {name, value} = e.target
+        this.setState({[name]: value})
+    }
+
+    handleSubmit = (e) => {
+        e.prebventDefault()
+    }
+    render(){
+        return(
+            <div>
+                <p>This is the admin dashboard</p>
+            </div>
+        )
+    } 
+}
+
+export default Login;
